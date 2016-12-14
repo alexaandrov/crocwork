@@ -14,3 +14,8 @@ services:
             arguments: [~, App\CrocworkBundle\Entity\User, ~]
             tags:
                 - { name: sonata.admin, manager_type: orm, group: All Tables, label: "Users" }
+  admin.upload:
+              class: App\CrocworkBundle\Admin\UploadAdmin
+              arguments: [~, App\CrocworkBundle\Entity\Upload, ~]
+              tags:
+                  - { name: sonata.admin, manager_type: orm, group: Tools, label: "Upload Data" }
