@@ -1,3 +1,11 @@
+app_crocwork_app_user:
+    resource: "@AppCrocworkBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+app_crocwork_app_organization:
+    resource: "@AppCrocworkBundle/Resources/config/routing/organization.yml"
+    prefix:   /organization
+
 app_crocwork_homepage:
     path:     /
     defaults: { _controller: AppCrocworkBundle:Default:index }

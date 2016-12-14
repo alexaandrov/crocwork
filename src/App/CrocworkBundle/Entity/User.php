@@ -225,5 +225,15 @@ class User
     {
         return $this->organization;
     }
+
+    /**
+     * For drop-down list
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getFirstname() . ' ' . $this->getLastname() ?: "";
+    }
 }
 

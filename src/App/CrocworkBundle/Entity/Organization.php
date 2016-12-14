@@ -155,5 +155,15 @@ class Organization
     {
         return $this->users;
     }
+
+    /**
+     * For drop-down list
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getDisplayName() ?: "";
+    }
 }
 
