@@ -1,0 +1,3 @@
+app_crocwork_homepage:
+    path:     /
+    defaults: { _controller: AppCrocworkBundle:Default:index }
