@@ -4,6 +4,13 @@ parameters:
 #    parameter_name: value
 
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+  admin.organization:
+          class: App\CrocworkBundle\Admin\OrganizationAdmin
+          arguments: [~, App\CrocworkBundle\Entity\Organization, ~]
+          tags:
+              - { name: sonata.admin, manager_type: orm, group: All Tables, label: "Organizations" }
+  admin.user:
+            class: App\CrocworkBundle\Admin\UserAdmin
+            arguments: [~, App\CrocworkBundle\Entity\User, ~]
+            tags:
+                - { name: sonata.admin, manager_type: orm, group: All Tables, label: "Users" }

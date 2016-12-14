@@ -67,7 +67,7 @@ swiftmailer:
     spool:     { type: memory }
 
 sonata_admin:
-   title: Joboard Admin
+   title: Crocwork
 
 sonata_block:
    default_contexts: [cms]
