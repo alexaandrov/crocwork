@@ -17,6 +17,7 @@ class LoadJobData extends AbstractFixture implements OrderedFixtureInterface
         $user1->setFirstname('Абрам');
         $user1->setLastname('Линкольн');
         $user1->setMiddlename('Абрамович');
+        $user1->setOrganization($em->merge($this->getReference('organization-org1')));
         $user1->setBirthday(new \DateTime('-3453 days'));
         $user1->setInn(2837485746811);
         $user1->setSnils(374638273612);
@@ -25,6 +26,7 @@ class LoadJobData extends AbstractFixture implements OrderedFixtureInterface
         $user2->setFirstname('Мак');
         $user2->setLastname('Ел');
         $user2->setMiddlename('Ложкой');
+        $user1->setOrganization($em->merge($this->getReference('organization-org2')));
         $user2->setBirthday(new \DateTime('-1200 days'));
         $user2->setInn(8234987434883);
         $user2->setSnils(324234234234);
@@ -33,6 +35,7 @@ class LoadJobData extends AbstractFixture implements OrderedFixtureInterface
         $user3->setFirstname('Архидея');
         $user3->setLastname('Лильева');
         $user3->setMiddlename('Ромашкович');
+        $user1->setOrganization($em->merge($this->getReference('organization-org3')));
         $user3->setBirthday(new \DateTime('-365 days'));
         $user3->setInn(45645645645646);
         $user3->setSnils(2342342342342);

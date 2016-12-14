@@ -6,12 +6,13 @@ use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Show\ShowMapper;
 
 class UserAdmin extends AbstractAdmin
 {
     protected $datagridValues = [
         '_sort_order' => 'ASC',
-        '_sort_by'    => 'name'
+        '_sort_by'    => 'firstname'
     ];
 
     protected function configureFormFields(FormMapper $formMapper)
@@ -22,6 +23,7 @@ class UserAdmin extends AbstractAdmin
             ->add('middlename')
             ->add('inn')
             ->add('snils')
+            ->add('organization')
         ;
     }
 
@@ -33,6 +35,7 @@ class UserAdmin extends AbstractAdmin
             ->add('middlename')
             ->add('inn')
             ->add('snils')
+            ->add('organization')
         ;
     }
 
@@ -44,6 +47,7 @@ class UserAdmin extends AbstractAdmin
             ->add('middlename')
             ->add('inn')
             ->add('snils')
+            ->add('organization')
             ->add('_action', 'actions', [
                 'actions' => [
                     'view' => [],
@@ -52,5 +56,16 @@ class UserAdmin extends AbstractAdmin
                 ]
             ])
         ;
+    }
+
+    protected function configureShowFields(ShowMapper $showMapper)
+    {
+        $showMapper
+            ->add('lastname')
+            ->add('firstname')
+            ->add('middlename')
+            ->add('inn')
+            ->add('snils')
+            ->add('organization');
     }
 }

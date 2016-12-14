@@ -12,7 +12,7 @@ class OrganizationAdmin extends AbstractAdmin
 {
     protected $datagridValues = [
         '_sort_order' => 'DESC',
-        '_sort_by' => 'created_at'
+        '_sort_by' => 'displayName'
     ];
 
     protected function configureFormFields(FormMapper $formMapper)
@@ -21,6 +21,7 @@ class OrganizationAdmin extends AbstractAdmin
             ->add('displayName')
             ->add('ogrn')
             ->add('oktmo')
+            ->add('users')
         ;
     }
 
@@ -30,6 +31,7 @@ class OrganizationAdmin extends AbstractAdmin
             ->add('displayName')
             ->add('ogrn')
             ->add('oktmo')
+            ->add('users')
         ;
     }
 
@@ -39,6 +41,7 @@ class OrganizationAdmin extends AbstractAdmin
             ->add('displayName')
             ->add('ogrn')
             ->add('oktmo')
+            ->add('users')
             ->add('_action', 'actions', [
                 'actions' => [
                     'view' => [],
@@ -55,6 +58,7 @@ class OrganizationAdmin extends AbstractAdmin
             ->add('displayName')
             ->add('ogrn')
             ->add('oktmo')
+            ->add('users')
         ;
     }
 }
