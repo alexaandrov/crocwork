@@ -1,0 +1,25 @@
+App\CrocworkBundle\Entity\Organization:
+    type: entity
+    repositoryClass: App\CrocworkBundle\Repository\OrganizationRepository
+    table: organization
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        displayName:
+            type: string
+            length: 100
+            unique: true
+        ogrn:
+            type: bigint
+            unique: true
+            nullable: true
+        oktmo:
+            type: bigint
+            unique: true
+            nullable: true
+    oneToMany:
+        users:
+            targetEntity: User
+            mappedBy: organization

@@ -1,0 +1,40 @@
+App\CrocworkBundle\Entity\User:
+    type: entity
+    repositoryClass: App\CrocworkBundle\Repository\UserRepository
+    table: user
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        lastname:
+            type: string
+            length: 45
+            unique: false
+        firstname:
+            type: string
+            length: 45
+            unique: false
+        middlename:
+            type: string
+            length: 45
+            unique: false
+        birthday:
+            type: date
+            unique: false
+            nullable: true
+        inn:
+            type: bigint
+            unique: true
+            nullable: true
+        snils:
+            type: bigint
+            unique: true
+            nullable: true
+    manyToOne:
+        organization:
+            targetEntity: Organization
+            inversedBy: users
+            joinColumn:
+                name: organization_id
+                referencedColumnName: id
